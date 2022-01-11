@@ -1,42 +1,41 @@
-# 04 Web APIs: Code Quiz
+# 05 Third-Party APIs: Work Day Scheduler
 
 ## Your Task
 
-At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
+Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
-To help familiarize you with these tests and allow you to use the skills covered in this unit, this week’s homework invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
-
-This week’s coursework will equip you with all the skills you need to succeed in this assignment.
+You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
 
 ## User Story
 
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
+```md
+AS AN employee with a busy schedule
+I WANT to add important events to a daily planner
+SO THAT I can manage my time effectively
 ```
 
 ## Acceptance Criteria
 
+```md
+GIVEN I am using a daily planner to create a schedule
+WHEN I open the planner
+THEN the current day is displayed at the top of the calendar
+WHEN I scroll down
+THEN I am presented with timeblocks for standard business hours
+WHEN I view the timeblocks for that day
+THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+WHEN I click into a timeblock
+THEN I can enter an event
+WHEN I click the save button for that timeblock
+THEN the text for that event is saved in local storage
+WHEN I refresh the page
+THEN the saved events persist
 ```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
-```
-
-## Mock-Up
 
 The following animation demonstrates the application functionality:
 
-![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/04-web-apis-homework-demo.gif)
+![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+
 
 ## Grading Requirements
 
@@ -44,46 +43,47 @@ This homework is graded based on the following criteria:
 
 ### Technical Acceptance Criteria: 40%
 
-* Satisfies all of the preceding acceptance criteria.
+* Satisfies all of the above acceptance criteria plus the following:
+
+  * Uses a date utility library to work with date and time
 
 ### Deployment: 32%
 
-* Application deployed at live URL.
+* Application deployed at live URL
 
-* Application loads with no errors.
+* Application loads with no errors
 
-* Application GitHub URL submitted.
+* Application GitHub URL submitted
 
-* GitHub repository contains application code.
+* GitHub repo contains application code
 
 ### Application Quality: 15%
 
-* Application user experience is intuitive and easy to navigate.
+* Application user experience is intuitive and easy to navigate
 
-* Application user interface style is clean and polished.
+* Application user interface style is clean and polished
 
-* Application resembles the mock-up functionality provided in the homework instructions.
+* Application resembles the mock-up functionality provided in the homework instructions
 
 ### Repository Quality: 13%
 
-* Repository has a unique name.
+* Repository has a unique name
 
-* Repository follows best practices for file structure and naming conventions.
+* Repository follows best practices for file structure and naming conventions
 
 * Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
 
-* Repository contains multiple descriptive commit messages.
+* Repository contains multiple descriptive commit messages
 
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
+* Repository contains quality README file with description, screenshot, and link to deployed application
 
 ## Review
 
-You are required to submit BOTH of the following for review:
+You are required to submit the following for review:
 
-* The URL of the functional, deployed application.
+* The URL of the deployed application
 
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
+* The URL of the GitHub repository, with a unique name and a README describing the project
 
----
-
+- - -
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
