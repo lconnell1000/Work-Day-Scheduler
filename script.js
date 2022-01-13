@@ -70,9 +70,10 @@ function dataSave(event){
 }
 
 
-//clear data at end of each working day
+//clear data at end of each working day between 6 and 7pm
+//after 7pm will be able to set new data.
 function wipeData () {
-    if (currentTime > 18) {
+    if (currentTime === 18) {
         localStorage.clear
     }
 }
