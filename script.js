@@ -1,19 +1,25 @@
 var newEventEl = $(".new-event");
-var btnSave = $(".saveBtn")
+var saveBtn = $(".saveBtn")
 var currentTime = moment().format("HH")
 
 var today = moment().format("dddd, MMM Do");
 $("#currentDay").text(today);
 
+//need to load any stored data each time the page is loaded
+function showEvents() {
+    for (var k=0; k<newEventEl.length; k++) {
 
-//when click on middle column on row can edit content inside to add event
-//make form show when user clicks in 2nd column
+        var eventData = newEventEl[k].id;
 
-//create function to handle form submittion
-//save button at end of row in 3rd column will save content in 2nd column to 
-//local storage when clicked
+           //get the element from the HTML using the ID
+        var dataSaved = document.getElementById(eventData)
 
-//data to be displayed the next time the page is shown
+        var properTime = 9 + k;
+        var dataToRender = localStorage.getItem("data" + properTime);
+        dataSaved.textContent = dataToRender;
+    }
+}
+
 
 //each row is color coded depending wether in the future(green) 
 // current (red) or past(grey)
@@ -42,3 +48,34 @@ var timeColor = function changeColor () {
 
 //check every minute to see if color should change
 setInterval(timeColor(), (6000))
+
+//need to get the data in the text area to save when button is clicked
+saveBtn.on('click', dataSave)
+
+function dataSave(event){
+    event.preventDefault();
+
+    for (var j=0; j <newEventEl.length; j++) {
+
+        var eventData = newEventEl[i].id;
+        //get the element from the HTML using the ID
+        var dataSaved = document.getElementById(eventData)
+        // actual time will be 9 + whatever j is, as when j =0 will be looking 
+        //at 09, j=1 will be looking at 10 etc
+        var properTime  = 9 + j;
+        //sava the data to the local storage
+        data = dataSaved.ariaValueMax;
+        localStorage.setItem("data" + properTime, data);
+    }
+}
+
+
+//clear data at end of each working day
+function wipeData () {
+    if (currentTime > 18) {
+        localStorage.clear
+    }
+}
+
+showEvents()
+wipeData();
