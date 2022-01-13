@@ -57,7 +57,7 @@ function dataSave(event){
 
     for (var j=0; j <newEventEl.length; j++) {
 
-        var eventData = newEventEl[i].id;
+        var eventData = newEventEl[j].id;
         //get the element from the HTML using the ID
         var dataSaved = document.getElementById(eventData)
         // actual time will be 9 + whatever j is, as when j =0 will be looking 
