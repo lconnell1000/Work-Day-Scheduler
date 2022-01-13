@@ -64,7 +64,7 @@ function dataSave(event){
         //at 09, j=1 will be looking at 10 etc
         var properTime  = 9 + j;
         //sava the data to the local storage
-        data = dataSaved.ariaValueMax;
+        data = dataSaved.value;
         localStorage.setItem("data" + properTime, data);
     }
 }
