@@ -7,8 +7,8 @@ $("#currentDay").text(today);
 
 //need to load any stored data each time the page is loaded
 function showEvents() {
-    //if start of new day wipe data from previous day
-    if (currentHour < 9) {
+    //if end of day wipe data
+    if (currentHour > 17) {
         wipeData();
     }
     //otherwise if current day get any data that has been saved that day
