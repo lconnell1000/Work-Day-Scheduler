@@ -8,31 +8,31 @@ $("#currentDay").text(today);
 //need to load any stored data each time the page is loaded
 function showEvents() {
     //if start of new day wipe data from previous day
-    if (currentHour <9) {
+    if (currentHour < 9) {
         wipeData();
     }
     //otherwise if current day get any data that has been saved that day
     else {
-    for (var k=0; k<newEventEl.length; k++) {
+        for (var k = 0; k < newEventEl.length; k++) {
 
-        var eventData = newEventEl[k].id;
+            var eventData = newEventEl[k].id;
 
-           //get the element from the HTML using the ID
-        var dataSaved = document.getElementById(eventData)
+            //get the element from the HTML using the ID
+            var dataSaved = document.getElementById(eventData)
 
-        var properTime = 9 + k;
-        var dataToRender = localStorage.getItem("data" + properTime);
-        dataSaved.textContent = dataToRender;
-    }
+            var properTime = 9 + k;
+            var dataToRender = localStorage.getItem("data" + properTime);
+            dataSaved.textContent = dataToRender;
         }
+    }
 }
 
 
 //each row is color coded depending wether in the future(green) 
 // current (red) or past(grey)
-var timeColor = function changeColor () {
+var timeColor = function changeColor() {
     //loop through each text area
-    for (var i = 0; i < newEventEl.length; i++){
+    for (var i = 0; i < newEventEl.length; i++) {
         //make a string of newEventEl
         var newEventTime = newEventEl[i].id;
 
@@ -58,17 +58,17 @@ setInterval(timeColor(), (6000))
 //need to get the data in the text area to save when button is clicked
 saveBtn.on('click', dataSave)
 
-function dataSave(event){
+function dataSave(event) {
     event.preventDefault();
 
-    for (var j=0; j <newEventEl.length; j++) {
+    for (var j = 0; j < newEventEl.length; j++) {
 
         var eventData = newEventEl[j].id;
         //get the element from the HTML using the ID
         var dataSaved = document.getElementById(eventData)
         // actual time will be 9 + whatever j is, as when j =0 will be looking 
         //at 09, j=1 will be looking at 10 etwi
-        var properTime  = 9 + j;
+        var properTime = 9 + j;
         //sava the data to the local storage
         data = dataSaved.value;
         localStorage.setItem("data" + properTime, data);
@@ -77,7 +77,7 @@ function dataSave(event){
 
 
 //clear data at start of each working day before 9AM
-function wipeData () {
+function wipeData() {
     if (currentHour < 9) {
         localStorage.clear
     }
