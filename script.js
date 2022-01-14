@@ -7,6 +7,12 @@ $("#currentDay").text(today);
 
 //need to load any stored data each time the page is loaded
 function showEvents() {
+    //if start of new day wipe data from previous day
+    if (currentHour <9) {
+        wipeData();
+    }
+    //otherwise if current day get any data that has been saved that day
+    else {
     for (var k=0; k<newEventEl.length; k++) {
 
         var eventData = newEventEl[k].id;
@@ -18,13 +24,13 @@ function showEvents() {
         var dataToRender = localStorage.getItem("data" + properTime);
         dataSaved.textContent = dataToRender;
     }
+        }
 }
 
 
 //each row is color coded depending wether in the future(green) 
 // current (red) or past(grey)
 var timeColor = function changeColor () {
-    console.log(newEventEl);
     //loop through each text area
     for (var i = 0; i < newEventEl.length; i++){
         //make a string of newEventEl
@@ -70,13 +76,13 @@ function dataSave(event){
 }
 
 
-//clear data at end of each working day between 6 and 7pm
-//after 7pm will be able to set new data.
+//clear data at start of each working day before 9AM
 function wipeData () {
-    if (currentHour === 18) {
+    if (currentHour < 9) {
         localStorage.clear
     }
 }
 
-showEvents()
-wipeData();
+
+showEvents();
+
