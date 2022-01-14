@@ -1,6 +1,6 @@
 var newEventEl = $(".new-event");
 var saveBtn = $(".saveBtn")
-var currentTime = moment().format("HH")
+var currentHour = moment().format("HH")
 
 var today = moment().format("dddd, MMM Do");
 $("#currentDay").text(today);
@@ -36,9 +36,9 @@ var timeColor = function changeColor () {
         //remove any previous classes associated with the time
         $(newEventTime).removeClass(".gone .now .upcoming");
 
-        if (newEventTime > currentTime) {
+        if (newEventTime > currentHour) {
             $(timeColor).addClass("upcoming")
-        } else if (newEventTime < currentTime) {
+        } else if (newEventTime < currentHour) {
             $(timeColor).addClass("gone")
         } else {
             $(timeColor).addClass("now")
@@ -61,7 +61,7 @@ function dataSave(event){
         //get the element from the HTML using the ID
         var dataSaved = document.getElementById(eventData)
         // actual time will be 9 + whatever j is, as when j =0 will be looking 
-        //at 09, j=1 will be looking at 10 etc
+        //at 09, j=1 will be looking at 10 etwi
         var properTime  = 9 + j;
         //sava the data to the local storage
         data = dataSaved.value;
@@ -73,7 +73,7 @@ function dataSave(event){
 //clear data at end of each working day between 6 and 7pm
 //after 7pm will be able to set new data.
 function wipeData () {
-    if (currentTime === 18) {
+    if (currentHour === 18) {
         localStorage.clear
     }
 }
