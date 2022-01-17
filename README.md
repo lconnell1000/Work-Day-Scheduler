@@ -1,89 +1,35 @@
 # 05 Third-Party APIs: Work Day Scheduler
 
-## Your Task
+## The Project
+For this project we had to create a work day scheduler for an employee with a busy schedule.
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+The planner needs to display the current day at the top of the calander. When the user scrolls down then the user is presented with timeblocks. When the timeblocks are viewed they need to be color coded to indicate wether it is in the past, present or future. When the user clicks on a timeblock, they can enter an event. When they click save the save button for the timeblock then the text for that event is saved into the local storage. When the user refreshes the page, then the saved event persists.
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+One thing i added ontop was to clear the local storage at the end of each workday so that the user is presented with a fresh day planner for the next day.
 
-## User Story
 
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
-
-## Acceptance Criteria
-
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
-
-The following animation demonstrates the application functionality:
+## Mock Up
 
 ![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
 
 
-## Grading Requirements
+## Finished Product
 
-This homework is graded based on the following criteria: 
+> **Note** : This shows the landing page.
+![This shows the landing page of the webpage.](Screenshot1.png)
 
-### Technical Acceptance Criteria: 40%
+> **Note** : This shows one of the questions.
+![This shows how the questions are displayed within the quiz](Screenshot2.png)
 
-* Satisfies all of the above acceptance criteria plus the following:
+> **Note** : This shows wether the last answer was correct.
+![This shows wether the last question was answered correctly or not](Screenshot3.png)
 
-  * Uses a date utility library to work with date and time
+> **Note** : This shows where you log your score.
+![This shows where the user logs their highscore](Screenshot4.png)
 
-### Deployment: 32%
+> **Note** : This shows the highscore leaderboard.
+![This shows the leaderboard of highscores with the option to clear the leaderboard or return to the quiz](Screenshot5.png)
 
-* Application deployed at live URL
 
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the homework instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+## A link to the webpage is shown below:
+https://lconnell1000.github.io/codingQuiz/
